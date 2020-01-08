@@ -1,0 +1,2 @@
+class SeasoningsController < ApplicationController
+end
