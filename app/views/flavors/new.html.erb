@@ -1,0 +1,13 @@
+<%= form_for(@flavor) do |f| %>
+    <%= f.label :name, "調味料" %>
+    <%= f.text_field :name %>
+    <%= f.label :price, "価格" %>
+    <%= f.text_field :price %>
+    <%= f.radio_button :status, 1 %>
+    <%= f.label :status, "やばい"%>
+    <%= f.radio_button :status, 2%>
+    <%= f.label :status, "普通"%>
+    <%= f.radio_button :status, 3%>
+    <%= f.label :status, "たくさん"%>
+    <%= f.submit "Send" %>
+<% end %>
