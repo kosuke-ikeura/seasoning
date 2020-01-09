@@ -1,3 +1,43 @@
 // Place all the styles related to the flavors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#overlay {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   top: 0;
+   background: rgba(0, 0, 0, 0.3);
+   display: none;
+   z-index: 1
+}
+
+#modalWindow {
+   width: 350px;
+   height: 150px;
+   position: fixed;
+   border: 2px solid #D04255;
+   background-color: #FFF;
+   display: none;
+   z-index: 2;
+}
+
+body {
+   text-align: center;
+}
+
+button {
+   width: 100px;
+   height: 50px;
+   font-size: 1.2em;
+   color: #D04255;
+   background-color: #FFF;
+   border: solid 2px #D04255;
+   border-radius: 3px;
+   transition: .4s;
+}
+
+button:hover {
+   background: #D04255;
+   color: #FFF;
+}
