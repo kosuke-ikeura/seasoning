@@ -3,11 +3,20 @@
       <%= flavor.name %>
       <%= flavor.price %>
       <%= flavor.status %>
-      <button id="edit">編集</button>
-      <div id="overlay"></div>
-      <div id="modalWindow">
-         <p>テスト</p>
-         <button id="close">閉じる</button>
-      </div>
+      <button class="open">open</button>
    </div>
 <% end %>
+<div id="overlay"></div>
+<div id="modalWindow">
+   <%= form_for(@flavor) do |f| %>
+      <%= f.label :status, 'ステータスを変更' %>
+      <%= f.radio_button :status, 1 %>
+      <%= f.label :status, "やばい"%>
+      <%= f.radio_button :status, 2%>
+      <%= f.label :status, "普通"%>
+      <%= f.radio_button :status, 3%>
+      <%= f.label :status, "たくさん"%>
+      <%= f.submit "Send" %>
+   <% end %>
+   <button id="close">close</button>
+</div>

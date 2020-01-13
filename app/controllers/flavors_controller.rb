@@ -1,6 +1,7 @@
 class FlavorsController < ApplicationController
    def index
       @flavors = Flavor.all.order(id: "ASC").page(params[:page]).per(10)
+      @flavor = Flavor.new
    end
    def new
       @flavor = Flavor.new
