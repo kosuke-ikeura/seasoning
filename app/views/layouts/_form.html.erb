@@ -1,0 +1,16 @@
+<div class="modal-dialog" role="document">
+   <div class="modal-content">
+      <%= form_with(model: @flavor, local:true) do |form| %>
+         <%= form.label :status %>
+         <%= form.radio_button :status, 1 %>
+         <%= form.label :status, "やばい"%>
+         <%= form.radio_button :status, 2%>
+         <%= form.label :status, "普通"%>
+         <%= form.radio_button :status, 3%>
+         <%= form.label :status, "たくさん"%>
+         <div class="actions">
+            <%= form.submit %>
+         </div>
+      <% end %>
+   </div>
+</div>
