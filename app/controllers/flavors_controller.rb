@@ -1,4 +1,5 @@
 class FlavorsController < ApplicationController
+   before_action :authenticate_user!
    def index
       @flavors = Flavor.all.order(id: "ASC").page(params[:page]).per(10)
       @flavor = Flavor.new
