@@ -17,6 +17,7 @@ class FlavorsController < ApplicationController
       @flavor = Flavor.find(params[:id])
       @flavor.update(flavor_params)
       @flavors = Flavor.all.order(id: "ASC").page(params[:page]).per(10)
+      redirect_to flavors_path
    end
    
    private

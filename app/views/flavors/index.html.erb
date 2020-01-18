@@ -2,7 +2,7 @@
    <% @flavors.each do |flavor| %>
       <div>
          <%= flavor.name %>
-         <%= flavor.price %>
+         <%= flavor.summit_price %>
          <%= flavor.status %>
          <%= link_to 'UPDATE', "/flavors/#{flavor.id}/edit", remote: true, method: :get, class:"btn btn-lg, btn-primary"%>
       </div>
