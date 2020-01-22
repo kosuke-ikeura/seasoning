@@ -1,7 +1,7 @@
 class FlavorsController < ApplicationController
    before_action :authenticate_user!
    def index
-      @flavors = Flavor.all.order(id: "ASC").page(params[:page]).per(10)
+      @flavors = Flavor.where(id:1..25).order(id: "ASC").page(params[:page]).per(10)
       @flavor = Flavor.new
    end
    def new
@@ -23,6 +23,6 @@ class FlavorsController < ApplicationController
    
    private
    def flavor_params
-      params.require(:flavor).permit(:name, :price, :status)
+      params.require(:flavor).permit(:name, :purchase_price, :status, :summit_price).merge(user_id: current_user.id)
    end
 end

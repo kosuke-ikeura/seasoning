@@ -1,0 +1,7 @@
+<% @flavors.each do |f| %>
+    <div>
+        <%= f.name %>
+        <%= f.purchase_price %>
+    </div>
+<% end %>
+<%= @flavors.all.sum(:purchase_price)%>
