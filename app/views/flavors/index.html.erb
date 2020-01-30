@@ -1,12 +1,14 @@
-<div>
-   <% @flavors.each do |flavor| %>
-      <div>
-         <%= flavor.name %>
-         <%= flavor.summit_price %>
-         <%= flavor.status %>
-         <%= link_to 'UPDATE', "/flavors/#{flavor.id}/edit", remote: true, method: :get, class:"btn btn-lg, btn-primary"%>
+<div class="container">
+   <div class="row">
+      <% @flavors.each do |flavor| %>
+         <div class="col-sm-6">
+            <div class="box">
+               <p class="flavor"><%= flavor.name %></p>
+               <%= link_to image_tag(@StatusImage[flavor.status]), edit_flavor_path(flavor), remote: true, class: "StatusImage" %>
+            </div>
+         </div>
+      <% end %>
       </div>
-   <% end %>
 </div>
 <%= paginate(@flavors) %>
 <div id="flavor-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>

@@ -3,5 +3,7 @@
     <%= f.text_field :name, placeholder: params[:flavor_name] %>
     <%= f.label :purchace_price, "価格" %>
     <%= f.text_field :purchase_price %>
+    <%= f.label :image, 'image' %>
+    <%= f.file_field :image %>
     <%= f.submit "Send" %>
 <% end %>

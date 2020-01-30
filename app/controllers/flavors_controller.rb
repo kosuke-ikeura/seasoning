@@ -3,6 +3,7 @@ class FlavorsController < ApplicationController
    def index
       @flavors = Flavor.where(id:1..25).order(id: "ASC").page(params[:page]).per(10)
       @flavor = Flavor.new
+      @StatusImage = ["", "sad.png", "smile.png", "happy.png"]
    end
    def new
       @flavor = Flavor.new
@@ -30,6 +31,6 @@ class FlavorsController < ApplicationController
    
    private
    def flavor_params
-      params.require(:flavor).permit(:name, :purchase_price, :status, :summit_price).merge(user_id: current_user.id)
+      params.require(:flavor).permit(:name, :purchase_price, :status, :summit_price, :image).merge(user_id: current_user.id)
    end
 end
