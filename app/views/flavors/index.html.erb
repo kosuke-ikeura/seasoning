@@ -2,13 +2,13 @@
    <div class="row">
       <% @flavors.each do |flavor| %>
          <div class="col-sm-6">
-            <div class="box">
+            <div class="box rounded-lg shadow">
                <p class="flavor"><%= flavor.name %></p>
                <%= link_to image_tag(@StatusImage[flavor.status]), edit_flavor_path(flavor), remote: true, class: "StatusImage" %>
             </div>
          </div>
       <% end %>
-      </div>
+   </div>
 </div>
 <%= paginate(@flavors) %>
 <div id="flavor-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
