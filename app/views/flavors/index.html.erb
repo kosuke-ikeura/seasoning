@@ -1,7 +1,7 @@
 <div class="container">
    <div class="row">
       <% @flavors.each do |flavor| %>
-         <div class="col-sm-6">
+         <div class="col-md-6">
             <div class="box rounded-lg shadow">
                <p class="flavor"><%= flavor.name %></p>
                <%= link_to image_tag(@StatusImage[flavor.status]), edit_flavor_path(flavor), remote: true, class: "StatusImage" %>
@@ -12,19 +12,3 @@
 </div>
 <%= paginate(@flavors) %>
 <div id="flavor-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
-
-<!--<div id="overlay"></div>-->
-<!--<div id="modalWindow">-->
-<!--   <%#= form_for @flavor do |f| %>-->
-<!--      <%#= f.label :status, 'ステータスを変更' %>-->
-<!--      <%#= f.radio_button :status, 1 %>-->
-<!--      <%#= f.label :status, "やばい"%>-->
-<!--      <%#= f.radio_button :status, 2%>-->
-<!--      <%#= f.label :status, "普通"%>-->
-<!--      <%#= f.radio_button :status, 3%>-->
-<!--      <%#= f.label :status, "たくさん"%>-->
-<!--      <%#= f.submit "Send" %>-->
-<!--   <%# end %>-->
-<!--   <button id="close">close</button>-->
-<!--</div>-->
-<!--<%#= link_to 'New User', new_user_session_path, class: "btn btn-lg, btn-primary" %>-->

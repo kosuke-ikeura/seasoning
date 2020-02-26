@@ -39,10 +39,14 @@ body {
    font-family: 'Avenir', 'Corbel', 'Yu Gothic', '游ゴシック', YuGothic, '遊ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
 }
 
+nav a {
+   color: #ffffff;
+}
+
 .row {
    margin: 40px auto;
 }
-.col-sm-6 {
+.col-md-6 {
    margin-bottom: 40px;
    padding-right: 20px;
    padding-left: 20px;
