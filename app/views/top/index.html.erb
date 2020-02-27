@@ -1,0 +1,64 @@
+<%= stylesheet_link_tag 'top' %>
+<div id="main-image">
+</div>
+<div class="container">
+   <div class="wrapper">
+      <div class="first-container">
+         <div class="first-container-text">
+            <div class="number">
+               <%= image_tag "01.png"%>
+            </div>
+            <div class="text">
+               <h2 class="text-title">どこでも調味料の状態がわかります。</h2>
+               <p class="text-p">調味料が切れそうだったらChells Kitchenを利用しよう。</br>
+               サイト上で調味料を更新すれば、寮生に通知が入ります</br>
+               外出中の寮生に買ってきてもらいましょう。</p>
+            </div>
+         </div>
+         <div class="image">
+            <%= image_tag "iphone.png" %>
+         </div>
+      </div>
+      <div class="second-container">
+         <div class="second-container-text">
+            <div class="number02">
+               <%= image_tag "02.png" %>
+            </div>
+            <div class="text02">
+               <h2 class="text-title">レシートいらず、写真を送ろう</h2>
+               <p class="text-p">返金にレシートが必要でした。</br>
+               Chells Kitchenではレシートは必要ありません。</br>
+               調味料を買ったらレシートの写真を撮って</br>
+               webにあげましょう。</br>
+               そうすればお金が返ってきます。</p>
+            </div>
+         </div>
+         <div class="image02">
+            <%= image_tag "send.png" %>
+         </div>
+      </div>
+      <div class="third-container">
+         <div class="third-container-text">
+            <div class="number03">
+               <%= image_tag "03.png" %>
+            </div>
+            <div class="text03">
+               <h2 class="text-title">キッチンでのコミュニケーションアップ</h2>
+               <p class="text-p">調味料が不足している時、</br>
+               調味料を誰かが購入した時、寮生に通知が入ります。</br>
+               寮生が感謝を伝え合い、コミュニケーションが</br>
+               増えることを製作者は期待しています。</br>
+               みんな調味料買ってね。</p>
+            </div>
+         </div>
+         <div class="image03">
+            <%= image_tag "iphone.png"%>
+         </div>
+      </div>
+   </div>
+   <div class="try-use">
+      <%= link_to new_user_registration_path do %>
+         <%= image_tag "try-use.png"%>
+      <% end %>
+   </div>
+</div>

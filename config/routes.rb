@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "top#index"
   devise_for :users
   resources :flavors do
     collection do
@@ -6,7 +7,6 @@ Rails.application.routes.draw do
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "flavors#index"
   resources :users do 
     member do
       get 'image'
